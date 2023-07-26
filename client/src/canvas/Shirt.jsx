@@ -14,6 +14,7 @@ const Shirt = () => {
   const fullTexture = useTexture(snap.fullDecal);
 
   useFrame((state, delta) => easing.dampC(materials.lambert1.color, snap.color, 0.25, delta));
+
   const stateString = JSON.stringify(snap);
 
   return (
@@ -40,7 +41,7 @@ const Shirt = () => {
             rotation={[0, 0, 0]}
             scale={0.15}
             map={logoTexture}
-  
+
             depthTest={false}
             depthWrite={true}
           />
